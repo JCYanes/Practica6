@@ -1,0 +1,6 @@
+require "rps"
+describe jugada do
+	before :each do
+		@jugada=jugada.new
+	end
+end
