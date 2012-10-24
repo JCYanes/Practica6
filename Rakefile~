@@ -1,5 +1,8 @@
-task :default => :spec #Rake por defecto
-desc:"Realiza los test, con rspec"
-task :spec do
- sh "ruby-Ilib spec/rpc_spec.rb"
+task :default => :rspec #Rake por defecto
+desc "Run test with --format documentation"
+task :rspec do
+	sh "rspec -Ilib -Itest spec/rpc_spec.rb --format documentation"
 end
+
+#git difftool -t vimdiff para ver las diferencias de ficheros.
+#git stash pila de cambios que nose si cambiare al final(pila de cambios)
