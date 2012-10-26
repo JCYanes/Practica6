@@ -1,7 +1,7 @@
 task :default => :rspec #Rake por defecto
 desc "Run test with --format documentation"
 task :rspec do
-	sh "rspec -Ilib -Itest spec/rpc_spec.rb --format documentation"
+	sh "rspec -Ilib spec/rpc_spec.rb"
 end
 
 #git difftool -t vimdiff para ver las diferencias de ficheros.

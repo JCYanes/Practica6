@@ -17,7 +17,7 @@ describe PiedraPapelTijera do
 	end
 
 	it "\n Debe existir una lista de jugadas posibles y quien gana" do
-		@ppt.posibles.should=={:piedra=>:papel,:papel=>:tijeras,:tijeras=>:piedra}
+		@ppt.posibles.should==[:piedra=>:papel,:papel=>:tijeras,:tijeras=>:piedra]
 	end
 	it "\nSe debe invocar al metodo obtener_humano() para recoger la tirada del humano y que esta sea valida" do
 		@ppt.obtener_humano.should==@ppt.humano
@@ -26,14 +26,18 @@ describe PiedraPapelTijera do
 	    @ppt.obtener_maquina.should==@ppt.maquina
 	end
 	it "\nDebe existir una lista de resultados de un juego desde el punto de vista de la maquina"do
-	    @ppt.juegos.should=={:juego=>"numJuego",:jugadormaquina=>}
+	    @ppt.juegos.should==[:piedra,:papel,:tijeras,:piedra,:papel,:tijeras]
 	end
-# 	it "\nDebe existir un resultado para un juego, desde el punto de vista de lamaquina"do
-# 	end
-# 	it "\nSe debe invocar al metodo jugar() para determinar el ganador de la tirada"do
-# 	end
-# 	it "\nSe debe de comprobar que las tiradas de la maquina al ser aleatorias recorren las tres posibilidades"do
-# 	end
-# 	it "\nSe debe comprobar que las tiradas de la maquina y del humano no son siempre la misma"do
-# 	end
+	it "\nDebe existir un resultado para un juego, desde el punto de vista de la maquina"do	
+		@ppt.jugadamaquina.should==[:papel]
+	end
+ 	it "\nSe debe invocar al metodo jugar() para determinar el ganador de la tirada"do
+		@ppt.jugar.should=="maquina"
+ 	end
+	it "\nSe debe de comprobar que las tiradas de la maquina al ser aleatorias recorren las tres posibilidades"do
+		@ppt.comprobar_aleatorio.should=="ok"
+	end
+	it "\nSe debe comprobar que las tiradas de la maquina y del humano no son siempre la misma"do
+		@ppt.comprobar_distintas.should=="No son la misma"
+	end
 end
