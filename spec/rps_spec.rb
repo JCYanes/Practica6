@@ -26,7 +26,7 @@ describe PiedraPapelTijera do
 	    @ppt.obtener_maquina.should==@ppt.maquina
 	end
 	it "\nDebe existir una lista de resultados de un juego desde el punto de vista de la maquina"do
-	    @ppt.juegos.should==[]
+	    @ppt.juegos.should=={:juego=>"numJuego",:jugadormaquina=>}
 	end
 # 	it "\nDebe existir un resultado para un juego, desde el punto de vista de lamaquina"do
 # 	end

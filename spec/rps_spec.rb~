@@ -25,8 +25,9 @@ describe PiedraPapelTijera do
 	it "\nSe debe invocar al metodo obtener_maquina() para recoger la tirada de la maquina y que esta sea valida"do
 	    @ppt.obtener_maquina.should==@ppt.maquina
 	end
-# 	it "\nDebe existir una lista de resultados de un juego desde el punto de vista de la maquina"do
-# 	end
+	it "\nDebe existir una lista de resultados de un juego desde el punto de vista de la maquina"do
+	    @ppt.juegos.should=={:juego=>"numJuego",:jugadormaquina=>}
+	end
 # 	it "\nDebe existir un resultado para un juego, desde el punto de vista de lamaquina"do
 # 	end
 # 	it "\nSe debe invocar al metodo jugar() para determinar el ganador de la tirada"do
